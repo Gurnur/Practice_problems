@@ -31,7 +31,7 @@ type dll struct {
 	tail *node
 }
 
-// add the newly accessed vale
+// add the newly accessed value
 func (root *dll) prepend(key, val int) {
 	newNode := new(node)
 	newNode.key = key
