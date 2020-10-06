@@ -62,7 +62,7 @@ class LRUCache:
         i = self.head
         print("** Printing LRU cache **")
         while i != None:
-            print(i.val)
+            print("Key and value are: %d: %d" % (i.key, i.val))
             i = i.next
 
     """Get the value of the key"""
@@ -79,6 +79,7 @@ class LRUCache:
         if self.maxlen == 0:
             return
         if key in self.hashmap:
+            self.hashmap[key].val = val
             node = self.hashmap[key]
             self.move_to_front(node)
         else:
@@ -100,4 +101,5 @@ obj.print_list()
 print("Getting the value to key 2: %d" % (obj.get(2)))
 print("Getting the value to key 3: %d" % (obj.get(3)))
 print("Getting the value to key 1: %d" % (obj.get(1)))
+obj.put(2, 10)
 obj.print_list()
