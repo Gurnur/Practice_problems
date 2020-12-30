@@ -14,6 +14,9 @@ class Solution:
     Useful resource: https://stackoverflow.com/questions/6007289/calculating-the-critical-path-of-a-graph
     Critical path wiki:  https://en.wikipedia.org/wiki/Directed_acyclic_graph
 
+    The longest path in this DAG represents the critical path of the project, 
+    the one that controls the total time for the project. 
+
     TC: O(V+E)
     SC: O(V+E)
     """
